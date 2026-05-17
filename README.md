@@ -1,4 +1,4 @@
-# 🚀 GCP-Ops Control Plane (Local Cloud-Native Simulation)
+#  GCP-Ops Control Plane (Local Cloud-Native Simulation)
 
 A fully production-style **DevOps & Cloud-Native platform**, implemented entirely on **local infrastructure** using Kubernetes, Terraform (mocked), Kafka, OpenSearch, and modern observability tooling.  
 
@@ -6,7 +6,7 @@ This project simulates a complete Google Cloud architecture **without requiring 
 
 ---
 
-## 📘 Overview
+##  Overview
 
 This repository provides a complete, modular, and cloud-native control plane architecture designed for:
 
@@ -20,7 +20,7 @@ All components run locally but follow **real GCP production architecture pattern
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 The system is composed of:
 
@@ -36,7 +36,7 @@ All services run inside a dedicated Kubernetes namespace and communicate interna
 
 ---
 
-## 🧰 Technology Stack
+##  Technology Stack
 
 | Layer | Technology | Purpose |
 |------|------------|---------|
@@ -53,7 +53,7 @@ All services run inside a dedicated Kubernetes namespace and communicate interna
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 gcp-ops-control-plane/
@@ -99,7 +99,7 @@ gcp-ops-control-plane/
 
 ---
 
-## ✨ Key Features
+##  Key Features
 
 - Cloud-native architecture fully simulated locally  
 - Event-driven pipeline using Kafka  
@@ -112,7 +112,7 @@ gcp-ops-control-plane/
 
 ---
 
-## ⚙️ Setup & Installation
+##  Setup & Installation
 
 ### 1️⃣ Install Dependencies
 
@@ -147,13 +147,13 @@ kubectl apply -f infra/local/local-registry.yaml
 
 ---
 
-## ☸️ Kubernetes Deployment (Cloud-Native Phase)
+##  Kubernetes Deployment (Cloud-Native Phase)
 
 The project runs as a fully orchestrated **cloud-native system** inside Kubernetes.
 
 ---
 
-### 🧱 1. Create Namespace
+###  1. Create Namespace
 
 ```
 kubectl apply -f k8s/namespace.yaml
@@ -161,7 +161,7 @@ kubectl apply -f k8s/namespace.yaml
 
 ---
 
-### 📡 2. Deploy Core Infrastructure
+###  2. Deploy Core Infrastructure
 
 ```
 kubectl apply -f k8s/zookeeper.yaml
@@ -172,7 +172,7 @@ kubectl apply -f k8s/opensearch-dashboards.yaml
 
 ---
 
-### 🔍 3. Verify Cluster
+###  3. Verify Cluster
 
 ```
 kubectl get pods -n gcp-ops
@@ -182,7 +182,7 @@ Ensure all services are running successfully.
 
 ---
 
-### ⚙️ 4. Deploy Microservices
+###  4. Deploy Microservices
 
 ```
 kubectl apply -f k8s/api.yaml
@@ -191,7 +191,7 @@ kubectl apply -f k8s/worker.yaml
 
 ---
 
-### 🌐 5. Access Dashboards
+###  5. Access Dashboards
 
 ```
 kubectl port-forward svc/opensearch-dashboards 5601:5601 -n gcp-ops
@@ -205,18 +205,7 @@ http://localhost:5601
 
 ---
 
-## 📸 Screenshots
-
-> Replace these placeholders with actual project screenshots
-
-- Dashboard View  
-- Kubernetes Pods  
-- Kafka Topics  
-- Grafana Metrics  
-
----
-
-## 👨‍💻 Developer
+##  Developer
 
 **Ali Toksoy**  
 Cloud & DevOps Engineer  
